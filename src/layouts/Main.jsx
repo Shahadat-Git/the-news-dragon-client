@@ -5,12 +5,17 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Footer from '../shared/Footer/Footer';
 import LeftNav from '../shared/LeftNav/LeftNav';
 import RightNav from '../shared/RightNav/RightNav';
+import TopNav from '../shared/TopNav/TopNav';
+import LatestHeadLine from '../shared/LatestHeadLine/LatestHeadLine';
+import RightNavBanner from '../shared/RightNavBanner/RightNavBanner';
 
 const Main = () => {
     return (
         <div>
-            <Header></Header>
             <Container>
+                <Header></Header>
+                <LatestHeadLine></LatestHeadLine>
+                <TopNav></TopNav>
                 <Row>
                     <Col lg={3}>
                         <LeftNav></LeftNav>
@@ -19,7 +24,7 @@ const Main = () => {
                         <Outlet />
                     </Col>
                     <Col lg={3}>
-                        <RightNav></RightNav>
+                        <RightNav><RightNavBanner></RightNavBanner></RightNav>
                     </Col>
                 </Row>
 
